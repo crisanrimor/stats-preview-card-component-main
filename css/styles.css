@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root{
+    --main-bg: hsl(233, 47%, 7%);
+    --card-bg: hsl(244, 38%, 16%);
+    --accent: hsl(277, 64%, 61%);
+    --main-heading: hsl(0, 0%, 100%);
+    --main-paragraph: hsla(0, 0%, 100%, 0.75);
+    --stat-heading: hsla(0, 0%, 100%, 0.6);
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+
+.main{
+    min-height: 100vh;
+    display: flex;
+    background-color: var(--main-bg);
+}
+
+.card{
+    margin: auto;
+    width: 90%;
+    max-width: 75rem;
+    background-color: var(--card-bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0.625rem;
+    overflow: hidden;
+}
+
+.card__texts{
+    width: 35%;
+    margin: 0 auto;
+}
+
+.card__heading{
+    font-size: 2.1rem;
+    color: var(--main-heading);
+}
+
+.card__insight{
+    color: var(--accent);
+}
+
+.card__paragraph{
+    font-size: 0.9375rem;
+    color: var(--main-paragraph);
+    margin: 1.5em 0 4em;
+    line-height: 1.5;
+    width: 90%;
+}
+
+.card__stats{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__number{
+    font-weight: 700;
+    color: var(--main-heading);
+    margin-bottom: 0.5em;
+}
+
+.card__info{
+    text-transform: uppercase;
+    color: var(--stat-heading);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.card__picture{
+    width: 45%;
+    height: 100%;
+    position: relative;
+}
+
+.card__picture::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: hsla(277, 83%, 40%, 0.5);
+}
+
+.card__img{
+    width: 100%;
+    min-height: 28.125rem;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* media queries */
+
+@media (max-width: 1024px) {
+
+    .card__texts{
+        width: 40%;
+    }
+
+    .card__paragraph{
+        width: 100%;
+        margin: 1.5em 0;
+    }
+    
+    .card__stats{
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .card{
+        flex-direction: column;
+        max-width: 25rem;
+    }
+
+    .card__picture{
+        width: 100%;
+    }
+
+    .card__img{
+        min-height: auto;
+    }
+
+    .card__texts{
+        order: 1;
+        width: 100%;
+        padding: 2.5em 2.5em 2em;
+        text-align: center;
+    }
+
+    .card__heading{
+        font-size: 1.7rem;
+    }
+
+    .card__stats{
+        flex-direction: column;
+        gap: 1.5em;
+    }
+}

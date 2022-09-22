@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <title>Frontend Mentor | Stats preview card component</title>
+
+</head>
+<body>
+
+  <main class="main">
+
+    <article class="card">
+
+      <section class="card__texts">
+        <h1 class="card__heading">Get <span class="card__insight">insights</span> that help your business grow.</h1>
+        <p class="card__paragraph">Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+          experience, and overall efficiency.</p>
+
+        <div class="card__stats">
+          <div class="card__stat">
+            <h2 class="card__number">10k+</h2>
+            <p class="card__info">companies</p>
+          </div>
+
+          <div class="card__stat">
+            <h2 class="card__number">314</h2>
+            <p class="card__info">templates</p>
+          </div>
+
+          <div class="card__stat">
+            <h2 class="card__number">12M+</h2>
+            <p class="card__info">queries</p>
+          </div>
+
+        </div>
+      </section>
+
+      <picture class="card__picture">
+        <source srcset="images/image-header-mobile.jpg" media="(max-width: 768px)">
+        <img src="images/image-header-desktop.jpg" alt="" class="card__img">
+      </picture>
+    </article>
+
+  </main>
+
+</body>
+</html>
